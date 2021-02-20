@@ -13,11 +13,11 @@ If you want to interact with you contracts just simply open a truffle console wi
 
 To interact with the contract `HelloWorld` you need to create and instance of it in the console and then you can call all the functions. 
  
-``javascript
+```javascript
 let instance = await HelloWorld.deployed(); # creating the instance
 
 instance.hello(); # interacting with the instance
-``
+```
 
 ## Live stream
 In case you want to catch up on older livestreams you can find them on [youtube](https://www.youtube.com/channel/UCV2ZcyaGGp_tvaGY8XnA3Ow) or on [twitch](https://www.twitch.tv/diegokrupitza).
