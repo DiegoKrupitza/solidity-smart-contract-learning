@@ -13,11 +13,11 @@ If you want to interact with you contracts just simply open a truffle console wi
 
 To interact with the contract `HelloWorld` you need to create and instance of it in the console and then you can call all the functions. 
  
-``javascript
-let instance = await HelloWorld.deployed(); # creating the instance
+```javascript
+let instance = await HelloWorld.deployed(); // creating the instance
 
-instance.hello(); # interacting with the instance
-``
+instance.hello(); // interacting with the instance
+```
 
 In case you want to create a number that is bigger than the max value an int cant hold in js you can use the following.
 ```javascript
