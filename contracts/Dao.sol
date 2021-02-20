@@ -12,7 +12,9 @@ contract Dao {
         balances[msg.sender] = 0;
     }
 
-    // pay
+    /**
+     * Here you can pay money into the contract so at a later point you can withdraw it!
+     */
     function pay() public payable {
         uint payed = msg.value;
         address receiver = msg.sender;
@@ -25,8 +27,17 @@ contract Dao {
         }
     }
 
-    // withdraw
-    function withdraw(uint amount) public {
+    /**
+     * Allows you to see how much money is stored in your account
+     */
+    function accountValue() public view returns(uint) {
+        return balances[msg.sender];
+    }
+
+    /**
+     * Allows you to withdraw money from the contract
+     */
+    function withdraw(uint amount) payable public {
         address payable sender = msg.sender;
         uint funds = balances[sender];
 

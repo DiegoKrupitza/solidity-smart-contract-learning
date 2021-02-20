@@ -19,5 +19,10 @@ let instance = await HelloWorld.deployed(); # creating the instance
 instance.hello(); # interacting with the instance
 ``
 
+In case you want to create a number that is bigger than the max value an int cant hold in js you can use the following.
+```javascript
+BigInt('10000000000000000000') // 10eth
+```
+
 ## Live stream
 In case you want to catch up on older livestreams you can find them on [youtube](https://www.youtube.com/channel/UCV2ZcyaGGp_tvaGY8XnA3Ow) or on [twitch](https://www.twitch.tv/diegokrupitza).
