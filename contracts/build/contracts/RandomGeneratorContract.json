@@ -1,0 +1,511 @@
+{
+  "contractName": "RandomGeneratorContract",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        }
+      ],
+      "name": "RandomGeneratorEvent",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "gambler",
+          "type": "address"
+        }
+      ],
+      "name": "getRandom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"}],\"name\":\"RandomGeneratorEvent\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"gambler\",\"type\":\"address\"}],\"name\":\"getRandom\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/diego/development/smartcontract-learning/contracts/contracts/RandomGeneratorContract.sol\":\"RandomGeneratorContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/diego/development/smartcontract-learning/contracts/contracts/RandomGeneratorContract.sol\":{\"keccak256\":\"0x20db25c18d1f53e4793ad16a372c8eb9e19def4e776ea1c53ccca468e1eda307\",\"urls\":[\"bzz-raw://41b43777d6cf6e19b948bb4c98bd3da974891152047154b06c5a549f975f2c8c\",\"dweb:/ipfs/QmQmanXLVkqPgj3f4Geyyyr1U5LzKBpncTgLcH51hpq6yn\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b506101098061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806366f83e9114602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050606e565b005b7f435e67a299e3afa480ba32db008048f05ae616c93906e9ade8c7ec21859da81f81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a15056fea265627a7a72315820d4a53852f962ba827a22cf06798108dfb911068398a1d05a6a60cde7d6809e5664736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806366f83e9114602d575b600080fd5b606c60048036036020811015604157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050606e565b005b7f435e67a299e3afa480ba32db008048f05ae616c93906e9ade8c7ec21859da81f81604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390a15056fea265627a7a72315820d4a53852f962ba827a22cf06798108dfb911068398a1d05a6a60cde7d6809e5664736f6c63430005100032",
+  "sourceMap": "34:188:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:188:4;;;;;;;",
+  "deployedSourceMap": "34:188:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:188:4;;;;;;;;;;;;;;;;;;;74:94;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;74:94:4;;;;;;;;;;;;;;;;;;;:::i;:::-;;;132:29;153:7;132:29;;;;;;;;;;;;;;;;;;;;;;74:94;:::o",
+  "source": "pragma solidity >=0.4.16 <0.9.0;\n\ncontract RandomGeneratorContract {\n\n    function getRandom(address gambler) public {\n        emit RandomGeneratorEvent(gambler);\n    }\n\n    event RandomGeneratorEvent(address receiver);\n\n}",
+  "sourcePath": "/Users/diego/development/smartcontract-learning/contracts/contracts/RandomGeneratorContract.sol",
+  "ast": {
+    "absolutePath": "/Users/diego/development/smartcontract-learning/contracts/contracts/RandomGeneratorContract.sol",
+    "exportedSymbols": {
+      "RandomGeneratorContract": [
+        464
+      ]
+    },
+    "id": 465,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 449,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".16",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 464,
+        "linearizedBaseContracts": [
+          464
+        ],
+        "name": "RandomGeneratorContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 458,
+              "nodeType": "Block",
+              "src": "117:51:4",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 455,
+                        "name": "gambler",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 451,
+                        "src": "153:7:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 454,
+                      "name": "RandomGeneratorEvent",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 463,
+                      "src": "132:20:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 456,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "132:29:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 457,
+                  "nodeType": "EmitStatement",
+                  "src": "127:34:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 459,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRandom",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 451,
+                  "name": "gambler",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 459,
+                  "src": "93:15:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 450,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "93:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "92:17:4"
+            },
+            "returnParameters": {
+              "id": 453,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "117:0:4"
+            },
+            "scope": 464,
+            "src": "74:94:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 463,
+            "name": "RandomGeneratorEvent",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 462,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 461,
+                  "indexed": false,
+                  "name": "receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 463,
+                  "src": "201:16:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 460,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "201:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "200:18:4"
+            },
+            "src": "174:45:4"
+          }
+        ],
+        "scope": 465,
+        "src": "34:188:4"
+      }
+    ],
+    "src": "0:222:4"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/Users/diego/development/smartcontract-learning/contracts/contracts/RandomGeneratorContract.sol",
+      "exportedSymbols": {
+        "RandomGeneratorContract": [
+          464
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".16",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 449,
+        "name": "PragmaDirective",
+        "src": "0:32:4"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            464
+          ],
+          "name": "RandomGeneratorContract",
+          "scope": 465
+        },
+        "children": [
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getRandom",
+              "scope": 464,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "gambler",
+                      "scope": 459,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 450,
+                        "name": "ElementaryTypeName",
+                        "src": "93:7:4"
+                      }
+                    ],
+                    "id": 451,
+                    "name": "VariableDeclaration",
+                    "src": "93:15:4"
+                  }
+                ],
+                "id": 452,
+                "name": "ParameterList",
+                "src": "92:17:4"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 453,
+                "name": "ParameterList",
+                "src": "117:0:4"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 463,
+                              "type": "function (address)",
+                              "value": "RandomGeneratorEvent"
+                            },
+                            "id": 454,
+                            "name": "Identifier",
+                            "src": "132:20:4"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 451,
+                              "type": "address",
+                              "value": "gambler"
+                            },
+                            "id": 455,
+                            "name": "Identifier",
+                            "src": "153:7:4"
+                          }
+                        ],
+                        "id": 456,
+                        "name": "FunctionCall",
+                        "src": "132:29:4"
+                      }
+                    ],
+                    "id": 457,
+                    "name": "EmitStatement",
+                    "src": "127:34:4"
+                  }
+                ],
+                "id": 458,
+                "name": "Block",
+                "src": "117:51:4"
+              }
+            ],
+            "id": 459,
+            "name": "FunctionDefinition",
+            "src": "74:94:4"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "RandomGeneratorEvent"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "receiver",
+                      "scope": 463,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 460,
+                        "name": "ElementaryTypeName",
+                        "src": "201:7:4"
+                      }
+                    ],
+                    "id": 461,
+                    "name": "VariableDeclaration",
+                    "src": "201:16:4"
+                  }
+                ],
+                "id": 462,
+                "name": "ParameterList",
+                "src": "200:18:4"
+              }
+            ],
+            "id": 463,
+            "name": "EventDefinition",
+            "src": "174:45:4"
+          }
+        ],
+        "id": 464,
+        "name": "ContractDefinition",
+        "src": "34:188:4"
+      }
+    ],
+    "id": 465,
+    "name": "SourceUnit",
+    "src": "0:222:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {
+        "0x435e67a299e3afa480ba32db008048f05ae616c93906e9ade8c7ec21859da81f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "receiver",
+              "type": "address"
+            }
+          ],
+          "name": "RandomGeneratorEvent",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x02ACA225e8D9bDE3C279749D791e167ee45483D6",
+      "transactionHash": "0xeaa832583109e052da3bd73403466b878dc99697391ffa993c2f33fe8a5da66e"
+    }
+  },
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-02-24T18:03:38.916Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
